@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: elenizado\tests\test_unitaire.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="elenizado.tests.test_unitaire.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               elenizado\tests\test_unitaire.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F401">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F401:</strong> 'about.models.Gallerie' imported but unused
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="elenizado.tests.test_unitaire.source.html#l6">
+                  <tt><i>6</i> <span class="kn">from</span> <span class="nn">about.models</span> <span class="kn">import</span> <span class="n">Gallerie</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="W291">
+               <span class="count sev-2">
+                  12
+               </span>
+               <strong>W291:</strong> trailing whitespace
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="elenizado.tests.test_unitaire.source.html#l34">
+                  <tt><i>34</i>             <span class="n">telephone</span><span class="o">=</span><span class="s2">&quot;123456788&quot;</span><span class="p">,</span>  </tt>
+               </a>
+            </li><li>
+               
+               <a href="elenizado.tests.test_unitaire.source.html#l36">
+                  <tt><i>36</i>             <span class="n">logo</span><span class="o">=</span><span class="s2">&quot;test_logo.png&quot;</span><span class="p">,</span>  </tt>
+               </a>
+            </li><li>
+               
+               <a href="elenizado.tests.test_unitaire.source.html#l66">
+                  <tt><i>66</i>             <span class="n">telephone</span><span class="o">=</span><span class="s2">&quot;123456791&quot;</span><span class="p">,</span>  </tt>
+               </a>
+            </li><li>
+               
+               <a href="elenizado.tests.test_unitaire.source.html#l68">
+                  <tt><i>68</i>             <span class="n">logo</span><span class="o">=</span><span class="s2">&quot;test_logo.png&quot;</span><span class="p">,</span>  </tt>
+               </a>
+            </li><li>
+               
+               <a href="elenizado.tests.test_unitaire.source.html#l72">
+                  <tt><i>72</i>             <span class="n">titre</span><span class="o">=</span><span class="s2">&quot;Test Course&quot;</span><span class="p">,</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="elenizado.tests.test_unitaire.source.html#l92">
+                  <tt><i>92</i>             <span class="n">telephone</span><span class="o">=</span><span class="s2">&quot;123456792&quot;</span><span class="p">,</span>  </tt>
+               </a>
+            </li><li>
+               
+               <a href="elenizado.tests.test_unitaire.source.html#l94">
+                  <tt><i>94</i>             <span class="n">logo</span><span class="o">=</span><span class="s2">&quot;test_logo.png&quot;</span><span class="p">,</span>  </tt>
+               </a>
+            </li><li>
+               
+               <a href="elenizado.tests.test_unitaire.source.html#l98">
+                  <tt><i>98</i>             <span class="n">titre</span><span class="o">=</span><span class="s2">&quot;Test Video&quot;</span><span class="p">,</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="elenizado.tests.test_unitaire.source.html#l119">
+                  <tt><i>119</i>             <span class="n">titre</span><span class="o">=</span><span class="s2">&quot;Test Publication&quot;</span><span class="p">,</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="elenizado.tests.test_unitaire.source.html#l144">
+                  <tt><i>144</i>             <span class="n">titre</span><span class="o">=</span><span class="s2">&quot;Test Publication&quot;</span><span class="p">,</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="elenizado.tests.test_unitaire.source.html#l150">
+                  <tt><i>150</i>             <span class="n">nom</span><span class="o">=</span><span class="s2">&quot;Test User&quot;</span><span class="p">,</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="elenizado.tests.test_unitaire.source.html#l151">
+                  <tt><i>151</i>             <span class="n">email</span><span class="o">=</span><span class="s2">&quot;test@example.com&quot;</span><span class="p">,</span> </tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  5
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="elenizado.tests.test_unitaire.source.html#l9">
+                  <tt><i>9</i> <span class="k">class</span> <span class="nc">TimelineViewTest</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="elenizado.tests.test_unitaire.source.html#l27">
+                  <tt><i>27</i> <span class="k">class</span> <span class="nc">DetailViewTest</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="elenizado.tests.test_unitaire.source.html#l86">
+                  <tt><i>86</i> <span class="k">class</span> <span class="nc">VideoViewTest</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="elenizado.tests.test_unitaire.source.html#l111">
+                  <tt><i>111</i> <span class="k">class</span> <span class="nc">IsCommentaireViewTest</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="elenizado.tests.test_unitaire.source.html#l136">
+                  <tt><i>136</i> <span class="k">class</span> <span class="nc">IsReponsesCommentairesViewTest</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="W293">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>W293:</strong> blank line contains whitespace
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="elenizado.tests.test_unitaire.source.html#l21">
+                  <tt><i>21</i>     </tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: website\tests\test_index.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="website.tests.test_index.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               website\tests\test_index.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F841">
+               <span class="count sev-1">
+                  4
+               </span>
+               <strong>F841:</strong> local variable 'site_info' is assigned to but never used
+               
+                  (and 3 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Local variable 'site_info' is assigned to but never used:</p>
+               
+               <a href="website.tests.test_index.source.html#l13">
+                  <tt><i>13</i>     <span class="n">site_info</span> <span class="o">=</span> <span class="n">SiteInfo</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">status</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">some_field</span><span class="o">=</span><span class="s2">&quot;Test info&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'publication' is assigned to but never used:</p>
+               
+               <a href="website.tests.test_index.source.html#l14">
+                  <tt><i>14</i>     <span class="n">publication</span> <span class="o">=</span> <span class="n">Publication</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Test publication&quot;</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="s2">&quot;Test content&quot;</span><span class="p">,</span> <span class="n">date_add</span><span class="o">=</span><span class="s2">&quot;2024-11-25&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'event' is assigned to but never used:</p>
+               
+               <a href="website.tests.test_index.source.html#l15">
+                  <tt><i>15</i>     <span class="n">event</span> <span class="o">=</span> <span class="n">Evenement</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Test Event&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Test event description&quot;</span><span class="p">,</span> <span class="n">date_add</span><span class="o">=</span><span class="s2">&quot;2024-11-25&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'gallery_item' is assigned to but never used:</p>
+               
+               <a href="website.tests.test_index.source.html#l16">
+                  <tt><i>16</i>     <span class="n">gallery_item</span> <span class="o">=</span> <span class="n">Gallerie</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="s2">&quot;test_image.jpg&quot;</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F401">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F401:</strong> 'django.core.paginator.Paginator' imported but unused
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="website.tests.test_index.source.html#l7">
+                  <tt><i>7</i> <span class="kn">from</span> <span class="nn">django.core.paginator</span> <span class="kn">import</span> <span class="n">Paginator</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="W293">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>W293:</strong> blank line contains whitespace
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="website.tests.test_index.source.html#l35">
+                  <tt><i>35</i>     </tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="W391">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>W391:</strong> blank line at end of file
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="website.tests.test_index.source.html#l40">
+                  <tt><i>40</i> &nbsp;</tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>
