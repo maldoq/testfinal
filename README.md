@@ -1,137 +1,67 @@
-Elenizado : Plateforme de Test
-Ce projet consiste à tester et valider le bon fonctionnement d'un site web espagnol nommé Elenizado, conçu pour les interactions entre professeurs et étudiants autour de la langue espagnole. Ce README vous guidera pour lancer le projet et comprendre les tests réalisés.
+# 📚 **Elenizado : Plateforme de Test**
 
-📖 Introduction
-Le site Elenizado permet aux étudiants de :
+Bienvenue sur le projet **Elenizado**, une plateforme conçue pour favoriser les interactions entre professeurs et étudiants autour de la langue espagnole. Ce document vous guidera à travers les étapes d'installation, d'exécution et de test du projet.
 
-Consulter des articles récents sur la langue espagnole.
-Commenter des publications et répondre à d'autres commentaires.
-Découvrir les événements à venir liés à la langue espagnole.
-Consulter les bibliographies de certains auteurs (professeurs).
-Envoyer des requêtes pour contacter ces professeurs.
-Les tests ont pour objectif de vérifier :
+---
 
-La navigation correcte sur le site.
-Le bon fonctionnement des commentaires.
-L’envoi des messages via le formulaire de contact.
-⚙️ Installation et Lancement
-Prérequis
-Python (version ≥ 3.9)
-Django (version ≥ 4.0)
-Virtualenv pour la gestion des environnements virtuels.
-Node.js (si des dépendances frontend sont nécessaires)
-Étapes d'installation
-Cloner le projet
+## 📖 **Table des Matières**
 
-bash
-Copier le code
-git clone https://github.com/votre-repo/elenizado.git
-cd elenizado
-Créer et activer un environnement virtuel
+- [Introduction](#introduction)
+- [Installation et Lancement](#installation-et-lancement)
+- [Exécution des Tests](#exécution-des-tests)
+- [Plan de Test](#plan-de-test)
+- [Structure du Projet](#structure-du-projet)
+- [Outils et Technologies](#outils-et-technologies)
+- [Auteur](#auteur)
 
-bash
-Copier le code
-python -m venv venv
-source venv/bin/activate  # Sur Windows : venv\Scripts\activate
-Installer les dépendances
+---
 
-bash
-Copier le code
-pip install -r requirements.txt
-Appliquer les migrations
+## 📝 **Introduction**
 
-bash
-Copier le code
-python manage.py migrate
-Lancer le serveur
+**Elenizado** est une plateforme destinée aux étudiants pour :
+- Lire des articles récents.
+- Ajouter des commentaires ou répondre à des publications.
+- Découvrir des événements culturels.
+- Contacter des professeurs via un formulaire de requête.
 
-bash
-Copier le code
-python manage.py runserver
-Accéder à l'application sur http://127.0.0.1:8000/.
+Les tests sont réalisés pour garantir :
+1. Une navigation fluide.
+2. Un fonctionnement optimal des commentaires.
+3. La fiabilité des messages envoyés via le formulaire.
 
-🧪 Tests
-Types de tests réalisés
-Tests unitaires : Vérifient les composants individuels.
-Tests d’intégration : Assurent la bonne interaction entre les modules.
-Tests de performance : Évaluent la rapidité et l'efficacité du site avec Locust.
-Analyse CI/CD : Détection des failles dans les pipelines d’intégration continue.
-Exécution des tests
-Configurer pytest
+---
 
-Un fichier pytest.ini est inclus dans la racine du projet.
-Les tests se trouvent dans des dossiers nommés tests au sein de chaque application.
-Lancer les tests
+## ⚙️ **Installation et Lancement**
 
-bash
-Copier le code
-pytest
-Rapports
+### **Prérequis**
+- **Python** >= 3.9
+- **Django** >= 4.0
+- **Virtualenv**
+- **Node.js** (si applicable)
 
-Les résultats sont générés en HTML pour une visualisation détaillée.
-Les conventions PEP8 sont validées avec Flake8 :
-bash
-Copier le code
-flake8
-🔍 Plan de Test
-Identification des besoins
-Tester les liens des pages (accueil, détails des articles, etc.).
-Valider l’envoi des commentaires et leur gestion.
-Vérifier l’envoi des messages via le formulaire de contact.
-Cas de test prioritaires
-Inscription valide et invalide.
-Connexion valide et invalide.
-Ajout de blog (valide et invalide).
-Fonctionnalité de like.
-Commentaires (avec et sans authentification).
-Exemple de tests unitaires
-Voici un exemple de test pour vérifier l'accessibilité de la page d'accueil :
+### **Étapes d'installation**
+1. **Cloner le projet**
+   ```bash
+   git clone https://github.com/votre-repo/elenizado.git
+   cd elenizado
+2. **Créer et activer un environnement virtuel**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # Sous Windows : venv\Scripts\activate
+3. **Installer les dépendances**
+   ```bash
+   pip install -r requirements.txt
+4. **Appliquer les migrations**
+   ```bash
+   python manage.py migrate
+5. **Lancer le serveur local**
+   ```bash
+   python manage.py runserver
+6. Accéder à l'application via http://127.0.0.1:8000/.
 
-python
-Copier le code
-from django.test import TestCase, Client
+---
 
-class HomePageTest(TestCase):
-    def setUp(self):
-        self.client = Client()
+## 🧪 **Exécution des Tests**
 
-    def test_home_page_accessible(self):
-        response = self.client.get('/')
-        self.assertEqual(response.status_code, 200)
-📊 Résultats
-Tests manuels
+### **Lancer les tests unitaires avec Pytest**
 
-Problèmes détectés : erreurs de navigation dues à des importations incorrectes dans models.py.
-Le formulaire de contact génère une erreur en l’absence d’un email valide.
-Tests logiciels
-
-Rapport HTML généré pour les tests.
-Le code ne respecte pas entièrement les normes PEP8. Une configuration de pre-commit est recommandée.
-Tests de performance
-
-Les rapports Locust sont disponibles dans le dossier performancetest.
-🚀 Conclusion
-Une révision du code est nécessaire pour corriger les erreurs de navigation et de gestion des formulaires.
-Un système CI/CD est fortement recommandé pour maintenir la qualité du code et automatiser les tests.
-Implémenter un outil comme pre-commit pour respecter les normes PEP8.
-📂 Structure du Projet
-plaintext
-Copier le code
-elenizado/
-│
-├── elenizado/            # Application principale
-├── tests/                # Dossiers contenant les tests
-├── static/               # Fichiers statiques (CSS, JS, images)
-├── templates/            # Templates HTML
-├── manage.py             # Commande de gestion Django
-├── requirements.txt      # Dépendances Python
-└── README.md             # Ce fichier
-🛠️ Outils et Technologies
-Django : Framework backend.
-Pytest : Framework pour les tests.
-Flake8 : Validation des normes PEP8.
-Locust : Tests de performance.
-📝 Auteur
-Nom : Votre Nom
-Email : votre.email@example.com
-GitHub : Votre Profil GitHub
