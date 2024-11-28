@@ -42,7 +42,7 @@ Les tests sont réalisés pour garantir :
 ### **Étapes d'installation**
 1. **Cloner le projet**
    ```bash
-   git clone https://github.com/votre-repo/elenizado.git
+   git clone https://github.com/maldoq/testfinal.git
    cd elenizado
 2. **Créer et activer un environnement virtuel**
    ```bash
